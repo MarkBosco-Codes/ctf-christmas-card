@@ -19,8 +19,9 @@ var TARGET = 'MERRY CHRISTMAS!'
 function prepare(){
    for (var i = 0; i < strings.length; i++) {
        strings[i] = strings[i].slice(0,8)
-       return
+       
 }
+return
 }
 
 

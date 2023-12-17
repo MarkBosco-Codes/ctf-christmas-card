@@ -42,8 +42,8 @@
 
 
 <div id='share' style='font-size: 1.2em;'>
-         <input type="text" id="fromForm" name="fromForm" placeholder="From:" oninput='updateForm()'>
-         <input type="text" id="toForm" name="fromForm" placeholder="To:" oninput='updateForm()'>
+         <input type="text" id="fromForm" name="fromForm" placeholder="From: (Your name)" oninput='updateForm()'>
+         <input type="text" id="toForm" name="fromForm" placeholder="To: (Friend's name)" oninput='updateForm()'>
     <br><br>
         <p  style='font-family: monospace;font-size: 0.8em;'>Share with a friend: <a id = 'shareLink' style='font-family: monospace;'></a></p>
         </div>
@@ -62,7 +62,7 @@
 setTimeout(function () {
     document.getElementById('preloader').remove();
     document.getElementById('contents').style.display='block';
-},29)
+},1000)
         
     window.smoothScroll = function(target) {
     
