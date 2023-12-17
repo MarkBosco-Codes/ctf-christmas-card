@@ -81,14 +81,14 @@ document.getElementById('to').innerHTML = getQueryVariable('to','You');
         var fromshare = document.getElementById('fromForm').value;
         var toshare = document.getElementById('toForm').value;
         var shareLink = document.getElementById('shareLink');
-        shareLink.innerHTML=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
-        shareLink.href=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
+        shareLink.innerHTML=`${location.protocol + '//' + location.host + location.pathname}/?from=${fromshare}&to=${toshare}`
+        shareLink.href=`${location.protocol + '//' + location.host + location.pathname}/?from=${fromshare}&to=${toshare}`
         function updateForm(value) {
          var fromshare = document.getElementById('fromForm').value;
         var toshare = document.getElementById('toForm').value;
         var shareLink = document.getElementById('shareLink');
-        shareLink.innerHTML=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
-        shareLink.href=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
+        shareLink.innerHTML=`${location.protocol + '//' + location.host + location.pathname}/?from=${fromshare}&to=${toshare}`
+        shareLink.href=`${location.protocol + '//' + location.host + location.pathname}/?from=${fromshare}&to=${toshare}`
 }
         
         
