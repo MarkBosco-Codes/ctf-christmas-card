@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <title>The Christmas CTF Card</title>
+    <link rel="stylesheet" href="xmasStyle.css">
+    <link rel="icon" type="image/x-icon" href="./Images/favicon.png">
+    
+    </head>
+<body>
+    
+    <div id='preloader'>
+        <img src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjiC4pVW3VS__2qXhJZZOxlDj2zTufCM79b6dcPmURxXJUcxoAtWkAVLi4Vv7WWItJsqBQEOeGu-VaYbfpn6QFrMOuYr8Brs3EuSJwrtxznKq1GY_gy_Rjqq2Xz15OGi__gFj9ppeMkFEQcqtQFdeubjNvLU2fBoMAX9rKbNKr029w6FOpgYf1PwO3IDg/s320/FlagTheCapture%20New%20Logo.gif'>
+</div>
+    <div id='contents'>
+    <div id='header'>
+
+    <h1>Happy Holidays!</h1>
+            <p>From <span id='from'></span> to <span id='to'></span></p>
+            <div class='profilebox' style='min-height: 0px;font-family:Silkscreen'>
+        Thank you for being part of the CTF community :)
+        </div>
+    
+      <div id='stage'>
+        
+          
+          <img src="./Assets/Guy2.gif" height='100vh' style='animation: shuffle 2s infinite;animation-delay: 1s'>
+          <img src="./Assets/Guy1.gif" height='100vh' style='animation: shuffle 3s infinite;animation-delay: 0.5s'>
+        <img src="./Assets/Tree.gif" height='300vh'>
+          <img src="./Assets/Girl1.gif" height='100vh' style='animation: shuffle 4s infinite;animation-delay: 0s'>
+          <img src="./Assets/Hoodie1.gif" height='100vh' style='animation: shuffle 5s infinite;animation-delay: 0.7s'>
+        </div>
+        
+        
+    <div id='navbar'>
+    
+        <a  onclick=" music()" >Start Music</a>&nbsp;|&nbsp;
+<a  onclick="getFlag()" >Get Flag</a>
+    
+        </div>
+        </div>
+    <div id='info'>
+
+
+<div id='share' style='font-size: 1.2em;'>
+         <input type="text" id="fromForm" name="fromForm" placeholder="From:" oninput='updateForm()'>
+         <input type="text" id="toForm" name="fromForm" placeholder="To:" oninput='updateForm()'>
+    <br><br>
+        <p  style='font-family: monospace;font-size: 0.8em;'>Send to a friend: <a id = 'shareLink' style='font-family: monospace;'></a></p>
+        </div>
+
+
+              <footer style='font-size: 0.8em;'>
+    <span style='font-family: fantasy'>&copy;</span> 2023 Mark Bosco / <a href='https://flagthecapture.blogspot.com'>FlagTheCapture.blogspot.com </a><img src="./Assets/Cat1.gif" style='height:2.2em;'>
+    </footer> <br> 
+        </div>
+
+    </div>
+<script src="./logic.js"></script>
+    <script>
+        
+        document.getElementById('contents').style.display='none';
+setTimeout(function () {
+    document.getElementById('preloader').remove();
+    document.getElementById('contents').style.display='block';
+},29)
+        
+    window.smoothScroll = function(target) {
+    
+document.getElementById(target).scrollIntoView()
+}
+    function music() {
+  var audio = new Audio('./Assets/Deck_The_Halls.mp3');
+  audio.play();
+}
+        
+
+
+document.getElementById('from').innerHTML = getQueryVariable('from','Mark Bosco');
+document.getElementById('to').innerHTML = getQueryVariable('to','You');
+        
+        var fromshare = document.getElementById('fromForm').value;
+        var toshare = document.getElementById('toForm').value;
+        var shareLink = document.getElementById('shareLink');
+        shareLink.innerHTML=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
+        shareLink.href=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
+        function updateForm(value) {
+         var fromshare = document.getElementById('fromForm').value;
+        var toshare = document.getElementById('toForm').value;
+        var shareLink = document.getElementById('shareLink');
+        shareLink.innerHTML=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
+        shareLink.href=`${window.location.origin}/?from=${fromshare}&to=${toshare}`
+}
+        
+        
+    </script>
+    </body>
+</html>
